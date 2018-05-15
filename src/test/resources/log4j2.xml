@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	 Copyright (c) 2013-2018 Cognizant TriZetto Software Group, Inc. All rights reserved.
+
+	 This software is the confidential and proprietary information of
+	 Cognizant TriZetto Software Group, Inc.  or its affiliates ("Confidential
+	 Information"). You shall not disclose such Confidential Information and
+	 shall use it only in accordance with the terms of the license agreement
+	 you entered into with Cognizant TriZetto Software Group, Inc. or
+	 its predecessor.
+-->
+<configuration status="OFF">
+  <appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %msg%n"/>
+    </Console>
+    <File name="File" fileName="target/test-logs/testrun.log" bufferedIO="true">
+ 	  <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %msg%n"/>
+  	</File>
+  </appenders>
+  <loggers>
+    <root level="trace">
+      <appender-ref ref="Console" level="debug"/>
+      <appender-ref ref="File" level="trace"/>
+    </root>
+  </loggers>
+</configuration>
